@@ -1,0 +1,38 @@
+name: Production
+
+on:
+  push:
+    branches: [ "GithubCI" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Docker
+        uses: docker/setup-docker@v1
+      - name: Build and test
+        run: |
+          docker-compose build
+          docker-compose up -d
+          docker-compose exec app npm install
+          docker-compose exec app npm run test
+          docker-compose exec app npm run start
+          docker-compose down
