@@ -30,14 +30,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Start containers
-      run: docker-compose -f "docker-compose.yml" up -d --build
-
-    - name: Launch application
-      run: docker-compose exec app npm run start
-
-    - name: Launch tests
-      run: docker-compose exec app npm run test
+    - name: Set up Docker Build
+      run: |
+        docker-compose -f "docker-compose.yml" up -d --build
+        docker-compose exec app npm run start
+        docker-compose exec app npm run test
 
     - name: Stop containers
       if: always()
