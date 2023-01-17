@@ -14,7 +14,7 @@ graph LR
 graph LR
     A[Développeur] --> B[Dépôt GitLab]
     B --> C[Lancement de Github Action
-    C--> D[CI/CD GitLab]
+    C --> D[CI/CD GitLab]
     D --> E[Test et Déploiement]
     E --> F[Mise à jour du statut de déploiement]
 ```
