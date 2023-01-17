@@ -11,21 +11,23 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Github CI
-      uses: actions/include@v2
-      with:
-        path: github.yml
+      run: |
+        echo "::set-env name=GITHUB_WORKSPACE::$PWD"
+        echo "::add-path::$PWD"
+        chmod +x github.yml
+        ./other-file.yml
     
-    - name: GitLab CI
-      uses: actions/include@v2
-      with:
-        path: gitlab.yml
+    # - name: GitLab CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: gitlab.yml
 
-    - name: Travis CI
-      uses: actions/include@v2
-      with:
-        path: travis.yml
+    # - name: Travis CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: travis.yml
 
-    - name: Jenkins CI
-      uses: actions/include@v2
-      with:
-        path: jenkins.yml
+    # - name: Jenkins CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: jenkins.yml
