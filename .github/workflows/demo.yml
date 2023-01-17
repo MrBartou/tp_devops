@@ -5,17 +5,17 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      GITHUB_WORKSPACE: ${{ env.PWD }}
+      
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Github CI
+    - name: Run another yml file
       run: |
-        echo "::set-env name=GITHUB_WORKSPACE::$PWD"
-        echo "::add-path::$PWD"
-        chmod +x github.yml
-        ./other-file.yml
+        chmod +x other-file.yml
+        ./github.yml
     
     # - name: GitLab CI
     #   uses: actions/include@v2
