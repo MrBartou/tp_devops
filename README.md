@@ -1,104 +1,71 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Api_netflix_wish" />
-
-  &#xa0;
-</div>
-
-<h1 align="center">Api_netWish</h1>
+<h1 align="center">🚀 TP final DevOps 🚀</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/MrBartou/api_netwish?color=56BEB8">
-
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/MrBartou/api_netflix_wish?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/MrBartou/api_netflix_wish?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/MrBartou/api_netflix_wish?color=56BEB8">
-
-</p>
-
- <h4 align="center">
-	🚧  Api_netWish 🚀 V2  🚧
-</h4><hr>
-
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="#Requirement">Requirement</a> &#xa0; | &#xa0;
+  <a href="#GitHub">GitHub</a> &#xa0; | &#xa0;
+  <a href="#GitLab">GitLab</a> &#xa0; | &#xa0;
+  <a href="#Jenkins">Jenkins</a> &#xa0; | &#xa0;
+  <a href="#Travis">Travis</a> &#xa0; | &#xa0;
+  <a href="#Travis">Démo</a> &#xa0; | &#xa0;
+  <a href="#">Auteurs</a>
 </p>
 
 <br>
 
-## :dart: About ##
+## :dart: Requirement ##
 
-API de recomendation de films et de séries, basé sur les sorties en Salle et sur les meilleurs notes sur TMDB.
+Besoin de rien, pour lancer le projet. Il vous suffit de lancer les CI correspondantes dans Github pour la Démo
 
-## :sparkles: Features ##
+## :sparkles: GitHub ##
 
-:heavy_check_mark: Possibilité de créer un compte;\
-:heavy_check_mark: Listing de 10 films et 10 séries en rapport avec les dernières sorties;\
-:heavy_check_mark: Recommendation des 30 meilleurs films et séries;\
+GitHub est un service de gestion de code source basé sur Git qui permet aux développeurs de stocker et de partager leur code. Il est souvent utilisé pour le développement de logiciels open-source.
 
-## :robot: Technologies ##
+Pour lancer la CI/CD GitHub :
+* Se rendre sur https://github.com/MrBartou/tp_devops/actions
+* Choisir le Workflow GitHub
+* Lancer le Workflow
 
-The following tools were used in this project:
+## :robot: GitLab ##
 
-- [Node.JS](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [OpenAPI](https://www.openapis.org/)
-- [Redis](https://redis.io/)
-- [Axios](https://axios-http.com/fr/docs/intro)
-- [Jest](https://jestjs.io/fr/)
-- [Super-Test](https://www.npmjs.com/package/supertest)
-- [Sequelize](https://sequelize.org/)
-- [JWT](https://jwt.io/)
+GitLab est un outil de gestion de code source similaire à GitHub qui propose des fonctionnalités de développement intégrées telles que des pipelines de construction, des tests automatisés et des déploiements en continu.
 
-## :white_check_mark: Requirements ##
+Pour lancer la CI/CD GitLab :
+* Se rendre sur https://github.com/MrBartou/tp_devops/actions
+* Choisir le Workflow GitLab
+* Lancer le Workflow
+* Vous pouvez voir le rendu sur GitLab
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/)  and [Redis](https://redis.io/) installed.
+## :white_check_mark: Jenkins ##
 
-## :notebook: Note for API ##
+Jenkins est un outil de automatisation de construction et de déploiement qui permet aux développeurs de créer des pipelines de construction automatisés pour leur code. Il est souvent utilisé pour la construction de logiciels sur des serveurs distants.
 
-You can know all routes of the API with the documentation in the address : http://localhost:3000/api-docs/
+Pour lancer la CI/CD Jenkins :
+* Se rendre sur https://github.com/MrBartou/tp_devops/actions
+* Choisir le Workflow Jenkins
+* Lancer le Workflow
+* Vous pouvez voir le rendu sur Jenkins afin de voir les Jobs
 
-Before you start the projet, you need to stop mysql and redis server on your computer. Because they bind the port 3306 and 6379.
+## :notebook: Travis ##
 
-You don't need to install the database, it's already in the docker-compose.yml file.
+Travis CI est un service d'intégration continue qui permet aux développeurs de tester et de déployer automatiquement leur code sur des serveurs distants. Il est souvent utilisé pour les projets open-source hébergés sur GitHub.
 
-Before you use the API, you need to create a user with the route : http://localhost:3000/users/ and login with the route : http://localhost:3000/users/ login/
-## :checkered_flag: Starting with docker ##
+Pour lancer la CI/CD Travis :
+* Se rendre sur https://github.com/MrBartou/tp_devops/actions
+* Choisir le Workflow Travis
+* Lancer le Workflow
+* Vous pouvez voir le rendu sur Travis afin de voir les Jobs
 
-```bash
-# Clone this project
-$ git clone https://github.com/MrBartou/api_netflix_wish
+## :notebook: Travis ##
 
-# Access
-$ cd api_netwish
-
-# Launch the helper
-$ ./launch.sh
-
-# The server will initialize in the <http://localhost:3000>
-```
-
-## :pushpin: Options for launcher ##
-For launch the production use the option 1
-
-For launch the test use the option 2
-
-For clean the project use the option 3
-
-## :man_judge: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+Pour lancer la CI/CD Démo :
+* Se rendre sur https://github.com/MrBartou/tp_devops/actions
+* Choisir le Workflow Démo
+* Lancer le Workflow
+* Vous pouvez voir le rendu sur Travis afin de voir les Jobs
 
 ## :technologist: Author ##
 
-Made with :heart: by <a href="" target="_blank">Philippe VILARINHO, Maceo BASSE, Anthony DENIN</a>
+Made with :heart: by <a href="" target="_blank">Philippe VILARINHO, Maceo BASSE, Anthony DENIN, Thomas TIQUET</a>
 
 &#xa0;
 
