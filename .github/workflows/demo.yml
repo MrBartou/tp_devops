@@ -11,21 +11,21 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Github CI
-      uses: actions/inclue@v2
+      uses: actions/include@v2
       with:
         path: github.yml
     
     - name: GitLab CI
-      uses: actions/inclue@v2
+      uses: actions/include@v2
       with:
         path: gitlab.yml
 
     - name: Travis CI
-      uses: actions/inclue@v2
+      uses: actions/include@v2
       with:
         path: travis.yml
 
     - name: Jenkins CI
-      uses: actions/inclue@v2
+      uses: actions/include@v2
       with:
         path: jenkins.yml
