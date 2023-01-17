@@ -1,0 +1,31 @@
+name: Démo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Github CI
+      uses: actions/inclue@v2
+      with:
+        path: github.yml
+    
+    - name: GitLab CI
+      uses: actions/inclue@v2
+      with:
+        path: gitlab.yml
+
+    - name: Travis CI
+      uses: actions/inclue@v2
+      with:
+        path: travis.yml
+
+    - name: Jenkins CI
+      uses: actions/inclue@v2
+      with:
+        path: jenkins.yml

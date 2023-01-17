@@ -1,10 +1,6 @@
-name: Production
+name: GithubCI
 
-on:
-  push:
-    branches: [ "GithubCI" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push]
 
 jobs:
   build:
