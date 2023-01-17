@@ -1,4 +1,6 @@
-# Github Plan
+# Plan Projet
+
+## Github Plan
 
 ```mermaid
 graph LR
@@ -8,7 +10,7 @@ graph LR
     D --> E[Mise à jour du statut de déploiement]
 ```
 
-# GitLab Plan
+## GitLab Plan
 
 ```mermaid
 graph LR
@@ -19,7 +21,7 @@ graph LR
     E --> F[Mise à jour du statut de déploiement]
 ```
 
-# Jenkins Plan
+## Jenkins Plan
 
 ```mermaid
 graph LR
@@ -31,7 +33,7 @@ E --> F[Exécution des tests]
 F --> G[Déploiement]
 ```
 
-# Travis Plan
+## Travis Plan
 
 ```mermaid
 graph LR
@@ -43,3 +45,13 @@ E --> F[Exécution des tests]
 F --> G[Déploiement]
 G --> H[Mise à jour du statut de déploiement]
 ```
+
+# Répartition du travail
+
+Macéo est en charge de la mise en place d'un environnement de CI/CD avec runners sur GitLab
+
+Philippe est en charge de la mise en place de Jenkins et de la création des jobs.
+
+Thomas est en charge de la mise en place et la création des Jobs sur Travis CI.
+
+Anthony est en charge de GitHub et le mise en commun avec les autres technologie de CI/CD
