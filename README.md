@@ -55,7 +55,7 @@ Pour lancer la CI/CD Travis :
 * Lancer le Workflow
 * Vous pouvez voir le rendu sur Travis afin de voir les Jobs
 
-## :notebook: Travis ##
+## :notebook: Démo ##
 
 Pour lancer la CI/CD Démo :
 * Se rendre sur https://github.com/MrBartou/tp_devops/actions
