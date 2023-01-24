@@ -103,3 +103,11 @@ Made with :heart: by <a href="" target="_blank">Philippe VILARINHO, Maceo BASSE,
 &#xa0;
 
 <a href="#top">Back to top</a>
+
+
+## :Jenkins ## 
+
+-- installation Jenkins : brew install jenkins
+
+-- Nom d'utilisateur : superAdmin 
+-- Mot de passe : superAdmin
