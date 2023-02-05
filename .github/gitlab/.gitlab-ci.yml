@@ -1,0 +1,20 @@
+stages:
+  - test
+  - build
+  - stop
+
+test:
+  stage: test
+  script:
+    - npm test
+
+build:
+  stage: build
+  script:
+    - docker-compose up
+
+deploy:
+  stage: stop
+  script:
+    - docker-compose down
+  when: manual
