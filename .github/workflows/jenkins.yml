@@ -1,34 +1,28 @@
 name: Jenkins CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-  docker:
-    timeout-minutes: 10
-    runs-on: ubuntu-latest
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+    # - name: Start Jenkins
+    #   run: |
+    #     sudo service jenkins start
+    #     sleep 60
 
-    - name: Set up Docker Build
-      run: docker-compose -f "docker-compose.yml" up -d --build
+    # - name: Trigger Jenkins job
+    #   run: |
+    #     JENKINS_URL=http://localhost:8080
+    #     JENKINS_AUTH_TOKEN=${{ secrets.JENKINS_AUTH_TOKEN }}
+    #     JENKINS_JOB_NAME=my-test-job
+    #     JENKINS_PARAMETERS='{"param1":"value1","param2":"value2"}'
+    #     curl -X POST "$JENKINS_URL/job/$JENKINS_JOB_NAME/buildWithParameters" --user "$JENKINS_AUTH_TOKEN":"" -d "$JENKINS_PARAMETERS"
 
-    - name: Stop containers
-      if: always()
-      run: docker-compose -f "docker-compose.yml" down
