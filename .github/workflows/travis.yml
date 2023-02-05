@@ -2,8 +2,7 @@ name: Travis CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,9 +12,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Run Travis CI tests
-      run: |
-        travis lint .travis.yml
-        travis enable
-        travis login --pro
-        travis run test
+    - name: Run Travis CI build
+      uses: travis-ci/travis-ci-action@v1
+      with:
+        token: lWCEJ2m5Ga7UB5GPEsQquA
+        repository-slug: ${{ github.repository }}
+        job-id: id_of_the_travis_job
