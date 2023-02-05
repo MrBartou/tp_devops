@@ -1,20 +1,9 @@
 stages:
-  - test
-  - build
-  - stop
+  - install
+
+image: node:16.14.0
 
 test:
-  stage: test
+  stage: install
   script:
-    - npm test
-
-build:
-  stage: build
-  script:
-    - docker-compose up
-
-deploy:
-  stage: stop
-  script:
-    - docker-compose down
-  when: manual
+    - npm i
