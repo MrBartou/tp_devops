@@ -10,19 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - name: Trigger Jenkins Job
+      run: curl -X POST http://localhost:8080//job/tp_devops/build
 
-    # - name: Start Jenkins
-    #   run: |
-    #     sudo service jenkins start
-    #     sleep 60
-
-    # - name: Trigger Jenkins job
-    #   run: |
-    #     JENKINS_URL=http://localhost:8080
-    #     JENKINS_AUTH_TOKEN=${{ secrets.JENKINS_AUTH_TOKEN }}
-    #     JENKINS_JOB_NAME=my-test-job
-    #     JENKINS_PARAMETERS='{"param1":"value1","param2":"value2"}'
-    #     curl -X POST "$JENKINS_URL/job/$JENKINS_JOB_NAME/buildWithParameters" --user "$JENKINS_AUTH_TOKEN":"" -d "$JENKINS_PARAMETERS"
+    env:
+      JENKINS_AUTH: f31ff55c1983aa1c6ff2b44c58ddbdcf
 
