@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "14"
+
+install:
+  - npm ci
+
+script:
+  - npm test
+
+jobs:
+  include:
+    - stage: test
+      name: "Unit Tests"
+      script: npm test
+    - stage: test
+      name: "Docker Build"
+      script: docker-compose -f "docker-compose.yml" up -d --build
+      if: branch = master
+    - stage: test
+      name: "Docker Stop"
+      script: docker-compose -f "docker-compose.yml" down
+      if: branch = master
