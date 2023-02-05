@@ -1,0 +1,21 @@
+name: Travis CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Travis CI tests
+      run: |
+        travis lint .travis.yml
+        travis enable
+        travis login --pro
+        travis run test

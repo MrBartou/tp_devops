@@ -1,0 +1,33 @@
+name: Démo
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_WORKSPACE: ${{ env.PWD }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # - name: Run another yml file
+    #   run: |
+    #     chmod +x other-file.yml
+    #     ./github.yml
+
+    # - name: GitLab CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: gitlab.yml
+
+    # - name: Travis CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: travis.yml
+
+    # - name: Jenkins CI
+    #   uses: actions/include@v2
+    #   with:
+    #     path: jenkins.yml
