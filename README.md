@@ -29,41 +29,29 @@ Pour lancer la CI/CD GitHub :
 
 GitLab est un outil de gestion de code source similaire à GitHub qui propose des fonctionnalités de développement intégrées telles que des pipelines de construction, des tests automatisés et des déploiements en continu.
 
-Pour lancer la CI/CD GitLab :
-* Se rendre sur https://github.com/MrBartou/tp_devops/actions
-* Choisir le Workflow GitLab
-* Lancer le Workflow
-* Vous pouvez voir le rendu sur GitLab
+Pour voir les fichiers de configuration GitLab :
+* Se rendre sur https://gitlab.com/maceo.basse/tp_devops
+* Se rendre dans le dossier .github/gitlab/.gitlab-ci.yml
 
 ## :white_check_mark: Jenkins ##
 
 Jenkins est un outil de automatisation de construction et de déploiement qui permet aux développeurs de créer des pipelines de construction automatisés pour leur code. Il est souvent utilisé pour la construction de logiciels sur des serveurs distants.
 
-Pour lancer la CI/CD Jenkins :
-* Se rendre sur https://github.com/MrBartou/tp_devops/actions
-* Choisir le Workflow Jenkins
-* Lancer le Workflow
-* Vous pouvez voir le rendu sur Jenkins afin de voir les Jobs
+Pour voir les fichiers de configuration Jenkins :
+* Se rendre dans le dossier .github/jenkins/Jenkinsfile
 
 ## :notebook: Travis ##
 
 Travis CI est un service d'intégration continue qui permet aux développeurs de tester et de déployer automatiquement leur code sur des serveurs distants. Il est souvent utilisé pour les projets open-source hébergés sur GitHub.
 
-Pour lancer la CI/CD Travis :
-* Se rendre sur https://github.com/MrBartou/tp_devops/actions
-* Choisir le Workflow Travis
-* Lancer le Workflow
-* Vous pouvez voir le rendu sur Travis afin de voir les Jobs
-
-## :notebook: Démo ##
-
-Pour lancer la CI/CD Démo :
-* Se rendre sur https://github.com/MrBartou/tp_devops/actions
-* Choisir le Workflow Démo
-* Lancer le Workflow
-* Vous pouvez voir le rendu sur Travis afin de voir les Jobs
+Pour voir les fichiers de configuration Travis :
+* Se rendre dans le dossier .github/travis/.travis.yml
 
 ## :technologist: Author ##
+
+Afin de voir la répartition et les contributions de chacun, vous pouvez vous rendre sur les fichiers suivants:
+* Se rendre dans le dossier [Ressources](RESSOURCES.md)
+* Se rendre dans le dossier [Plan](PLAN.md)
 
 Made with :heart: by <a href="" target="_blank">Philippe VILARINHO, Maceo BASSE, Anthony DENIN, Thomas TIQUET</a>
 
